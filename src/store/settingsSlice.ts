@@ -1,21 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const SLICE_NAME = 'settingsSlice';
 
 interface IS {
-  testParam: boolean;
+  isNavMenuOpen: boolean;
 }
 
 const initialState: IS = {
-  testParam: true,
+  isNavMenuOpen: false,
 };
 
 const { reducer, actions } = createSlice({
   name: SLICE_NAME,
   initialState,
   reducers: {
-    testParamToggle: (state) => {
-      state.testParam = !state.testParam;
+    setIsNavMenuOpen: (state, action: PayloadAction<boolean>) => {
+      state.isNavMenuOpen = action.payload;
     },
   },
 });

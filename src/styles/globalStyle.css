@@ -24,5 +24,9 @@
 }
 
 body {
-  @apply bg-slate-400;
+  @apply bg-[#ddd];
+}
+
+.global-container {
+  @apply max-w-[1000px]
 }

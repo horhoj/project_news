@@ -4,6 +4,7 @@ export interface DocView {
   source: Doc['source'];
   img: string;
   isShowDate: boolean;
+  url: string;
 }
 
 export interface NewsResponse {
