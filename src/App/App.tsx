@@ -16,6 +16,10 @@ async function fetchServerPage(
   const res = await axios.request<NewsResponse>({
     method: 'get',
     url: `https://api.nytimes.com/svc/archive/v1/${year}/${month + 1}.json?api-key=m7GQtpOJnS1Rxym4icCt33CaQOpBoBze`,
+    headers: {
+      Accept: 'application/jsonp',
+      'Content-Type': 'application/jsonp',
+    },
   });
 
   const prevDate: { value: string | null } = { value: null };
